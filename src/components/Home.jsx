@@ -6,6 +6,7 @@ import Apply from './Apply';
 import AwardsContainer from './AwardsContainer';
 import Awesome from './Awesome';
 import Footer from './Footer';
+import Haqqinda from './Haqqinda';
 const Home = () => {
   return (
 <>
@@ -16,6 +17,7 @@ const Home = () => {
 <Apply/>
 <AwardsContainer/>
 <Awesome/>
+<Haqqinda/>
 <Footer/>
 </>
   )

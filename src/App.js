@@ -7,11 +7,9 @@ import { Fragment } from 'react';
 //router
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import Home from './components/Home';
-import NotFound from './components/NotFound';
-import About from './components/About';
-import Services from './components/Services';
 import Navbar from './components/Navbar';
-import Contact from './components/Contact';
+import FeedbackForm from './components/FeedbackForm';
+import ContactForm from './components/ContactForm';
 
 
 
@@ -21,15 +19,12 @@ function App() {
   <BrowserRouter>
 <Navbar/>
   <Routes>
-<Route path='/' element={<Home/>}/>
-<Route path='*' element={<NotFound/>}/>
-<Route path='/about' element={<About/>}/>
-<Route path='/services' element={<Services/>}/>
-<Route path='/contact' element={<Contact/>}/>
-
+    
+<Route path='/' element={<Home/>}/> 
 
 </Routes>
-
+<FeedbackForm/>
+<ContactForm/>
 </BrowserRouter>
 </Fragment>
   );

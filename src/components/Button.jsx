@@ -1,6 +1,5 @@
 import './Button.css'
 import React from 'react'
-import { AiOutlineInstagram } from 'react-icons/ai'
 import playIcon from '../assets/images/play.svg'
 
 const Button = ({butonunIcindekiDeyer,klassAdi,icon}) => {

@@ -5,7 +5,7 @@ import Button from './Button'
 import logo from '../assets/images/logo.svg'
 import { AiOutlineBars } from "react-icons/ai";
 import { GiCrossedSwords } from "react-icons/gi";
-import {Link} from 'react-router-dom'
+
 const Navbar = () => {
 const overlayinRefi=useRef()
 // overlayinRefi.current
@@ -25,13 +25,7 @@ if(e.target.classList.contains('menyunuAc')){
       <div className="overlay" ref={overlayinRefi}>
         {/* <button className='cross-icon'></button> */}
         <GiCrossedSwords  className='cross-icon'onClick={menyuBagla}/>
-        <div className="nav-links">
-          <a href=''>Home</a>
-          <a href=''>About</a>
-          <a href=''>Services</a>
-          <a href=''>Blog</a>
-          <a href='mailto:rvanm15@gmail.com'>Contact</a>
-        </div>
+       
       </div>
       <div> <nav className="navbar navbar-expand-lg ">
         <div className="container-fluid">
@@ -40,29 +34,7 @@ if(e.target.classList.contains('menyunuAc')){
             <AiOutlineBars className='bars-icon' />
 
           </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <Link className="nav-link text-white" aria-current="page" to="/">Home</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link text-white" to="/about">About</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link text-white " to="/services">Services</Link>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link text-white">Blog</a>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link text-white" to='/contact'>Contact</Link>
-              </li>
-            </ul>
-            <Button butonunIcindekiDeyer="Sign in" klassAdi="Sign-in"/>
-
-
-
-          </div>
+         
         </div>
       </nav></div>
     </>
