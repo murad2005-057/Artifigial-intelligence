@@ -6,7 +6,13 @@ import Apply from './Apply';
 import AwardsContainer from './AwardsContainer';
 import Awesome from './Awesome';
 import Footer from './Footer';
-import Haqqinda from './Haqqinda';
+
+import ContactForm from './ContactForm';
+import EducationalResources from './EducationalResources';
+import ToolsAndResources from './ToolsAndResources';
+import RealWorldApplications from './RealWorldApplications';
+import InteractiveElements from './InteractiveElements';
+import CertificationPrograms from './CertificationPrograms';
 const Home = () => {
   return (
 <>
@@ -17,7 +23,12 @@ const Home = () => {
 <Apply/>
 <AwardsContainer/>
 <Awesome/>
-<Haqqinda/>
+<EducationalResources/>
+<ToolsAndResources/>
+<RealWorldApplications/>
+<InteractiveElements/>
+<CertificationPrograms/>
+<ContactForm/>
 <Footer/>
 </>
   )

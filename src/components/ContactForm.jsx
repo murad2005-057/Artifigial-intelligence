@@ -1,5 +1,3 @@
-
-
 import React, { useState } from 'react';
 
 function ContactForm() {
@@ -18,25 +16,28 @@ function ContactForm() {
   };
 
   return (
-    <div style={{  margin: 'auto', padding: '20px', fontFamily: 'Arial, sans-serif', backgroundColor: '#08101d', color: '#fff' }}>
-      <h2 style={{ padding:'30px' , textAlign:'center'}}>Bizimlə Əlaqə <br />
+    <div style={{ margin: 'auto', padding: '20px', fontFamily: 'Arial, sans-serif', backgroundColor: '#08101d', color: '#fff' }}>
+      <h2 style={{ padding: '30px', textAlign: 'center' }}>
+        Bizimlə Əlaqə <br />
         Contact
       </h2>
       {submitted ? (
         <div style={{ color: 'green', marginTop: '20px' }}>
-         Təşəkkürlər! Feedbackinizi aldıq. <br />
-         Thanks! We received your feedback.
+          Təşəkkürlər! Feedbackinizi aldıq. <br />
+          Thanks! We received your feedback.
         </div>
       ) : (
         <form onSubmit={handleSubmit}>
-          <label htmlFor="name" style={{ display: 'block', marginBottom: '10px' }}>Name: <br /> Adnız: </label>
+          <label htmlFor="name" style={{ display: 'block', marginBottom: '10px' }}>
+            Name: <br /> Adınız:
+          </label>
           <input
             type="text"
             id="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
             style={{
-              width: '100%',
+              width: '50%',
               padding: '10px',
               border: '1px solid #ccc',
               borderRadius: '4px',
@@ -44,14 +45,16 @@ function ContactForm() {
             }}
           />
 
-          <label htmlFor="email" style={{ display: 'block', marginBottom: '10px' }}>Email: <br /> Email:</label>
+          <label htmlFor="email" style={{ display: 'block', marginBottom: '10px' }}>
+            Email: <br /> Email:
+          </label>
           <input
             type="email"
             id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             style={{
-              width: '100%',
+              width: '50%',
               padding: '10px',
               border: '1px solid #ccc',
               borderRadius: '4px',
@@ -59,24 +62,29 @@ function ContactForm() {
             }}
           />
 
-          <label htmlFor="message" style={{ display: 'block', marginBottom: '10px' }}>Massage: <br /> Mesajınız:</label>
+          <label htmlFor="message" style={{ display: 'block', marginBottom: '10px' }}>
+            Mesaj: <br /> Mesajınız:
+          </label>
           <textarea
             id="message"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             rows="4"
             style={{
-              width: '100%',
+              width: '50%',
               padding: '10px',
               border: '1px solid #ccc',
               borderRadius: '4px',
-              marginBottom: '20px'
+              marginBottom: '20px' // Burada məsafə qoyulub
             }}
           />
 
-          <button type="submit" style={{ padding: '10px 20px', border: 'none', borderRadius: '5px', backgroundColor: '#007BFF', color: 'white' }}>
-            Göndər
-          </button>
+          {/* Düyməni textarea-nın altında yerləşdiririk */}
+          <div>
+            <button type="submit" style={{ padding: '10px 20px', border: 'none', borderRadius: '5px', backgroundColor: '#007BFF', color: 'white' }}>
+              Göndər
+            </button>
+          </div>
         </form>
       )}
     </div>
