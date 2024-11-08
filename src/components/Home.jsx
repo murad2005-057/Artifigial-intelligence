@@ -6,13 +6,12 @@ import Apply from './Apply';
 import AwardsContainer from './AwardsContainer';
 import Awesome from './Awesome';
 import Footer from './Footer';
-
 import ContactForm from './ContactForm';
-import EducationalResources from './EducationalResources';
-import ToolsAndResources from './ToolsAndResources';
-import RealWorldApplications from './RealWorldApplications';
-import InteractiveElements from './InteractiveElements';
-import CertificationPrograms from './CertificationPrograms';
+import Services from '././Services';
+import Blog from './Blog';
+import TeamSection from './TeamSection';
+
+
 const Home = () => {
   return (
 <>
@@ -23,12 +22,10 @@ const Home = () => {
 <Apply/>
 <AwardsContainer/>
 <Awesome/>
-<EducationalResources/>
-<ToolsAndResources/>
-<RealWorldApplications/>
-<InteractiveElements/>
-<CertificationPrograms/>
 <ContactForm/>
+<Blog/>
+<Services/>
+<TeamSection/>
 <Footer/>
 </>
   )
