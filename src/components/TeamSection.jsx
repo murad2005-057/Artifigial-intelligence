@@ -5,21 +5,17 @@ import styled from 'styled-components';
 const teamMembers = [
   {
     name: 'Murad Abbaslı',
-    bio: 'İsntagram:@abbasoofff57',
-    imgSrc: 'member1.jpg', 
+    bio: 'İnstagram: @abbasoofff57',
+    imgSrc: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_-y__HRvdan2XqK0ZUvH2XaA9r7Be0Q-bCQ&s', // Burada şəkil yolunu dəyişdik
   },
   {
     name: 'Tural Cavadzadə',
-    bio: 'İnstagram:t.cavadov',
-    imgSrc: 'member2.jpg', 
+    bio: 'İnstagram: t.cavadov',
+    imgSrc: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpxVlJbWl2mN8grAmreIk1NrHrx_7cZL7JCQ&s',
   },
-  {
-    name: 'Murad Orucov',
-    role: 'Frond-End proqramlaşdırma üzrə təlimçi',
-    bio: 'İnstagram: codify.info',
-    imgSrc: 'https://itbrains.edu.az/src/img/teachers/15c80744-7bc2-4788-a723-d47db0c978df_MG_1859-compressed.jpg', 
-  },
+ 
 ];
+
 
 const TeamSection = () => {
   return (

@@ -16,82 +16,92 @@ function ContactForm() {
   };
 
   return (
-    <div style={{ margin: 'auto', padding: '20px', fontFamily: 'Arial, sans-serif', backgroundColor: '#08101d', color: '#fff' }}>
-      <h2 style={{ padding: '30px', textAlign: 'center' }}>
-        Bizimlə Əlaqə <br />
-        Contact
-      </h2>
-      {submitted ? (
-        <div style={{ color: 'green', marginTop: '20px' }}>
-          Təşəkkürlər! Feedbackinizi aldıq. <br />
-          Thanks! We received your feedback.
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '40px', fontFamily: 'Arial, sans-serif', backgroundColor: '#020a18', color: '#fff' }}>
+      <div style={{ width: '70%', display: 'flex', backgroundColor: '#08101d', borderRadius: '8px', boxShadow: '0px 0px 10px rgba(0,0,0,0.1)' }}>
+        
+        {/* Sol tərəf: Forma sahələri */}
+        <div style={{ flex: 1, padding: '40px' }}>
+          <h2 style={{ color: '#fff', textAlign: 'center', marginBottom: '20px' }}>
+            Bizimlə Əlaqə 
+          </h2>
+
+          {submitted ? (
+            <div style={{ color: 'green', marginTop: '20px', textAlign: 'center' }}>
+              Təşəkkürlər! Feedbackinizi aldıq. <br />
+              Thanks! We received your feedback.
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit}>
+              <label htmlFor="name" style={{ display: 'block', marginBottom: '10px' }}>
+                Adınız və Soyadınız:
+              </label>
+              <input
+                type="text"
+                id="name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                style={{
+                  width: '100%',
+                  padding: '10px',
+                  border: '1px solid #ccc',
+                  borderRadius: '4px',
+                  marginBottom: '20px'
+                }}
+              />
+
+              <label htmlFor="email" style={{ display: 'block', marginBottom: '10px' }}>
+                Mail adresiniz:
+              </label>
+              <input
+                type="email"
+                id="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                style={{
+                  width: '100%',
+                  padding: '10px',
+                  border: '1px solid #ccc',
+                  borderRadius: '4px',
+                  marginBottom: '20px'
+                }}
+              />
+
+              <label htmlFor="message" style={{ display: 'block', marginBottom: '10px' }}>
+                Əlavə qeyd:
+              </label>
+              <textarea
+                id="message"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                rows="4"
+                style={{
+                  width: '100%',
+                  padding: '10px',
+                  border: '1px solid #ccc',
+                  borderRadius: '4px',
+                  marginBottom: '20px'
+                }}
+              />
+
+              <div style={{ textAlign: 'center' }}>
+                <button type="submit" style={{ padding: '10px 20px', border: 'none', borderRadius: '5px', backgroundColor: '#ff007b', color: 'white', fontWeight: 'bold' }}>
+                  Göndər
+                </button>
+              </div>
+            </form>
+          )}
         </div>
-      ) : (
-        <form onSubmit={handleSubmit}>
-          <label htmlFor="name" style={{ display: 'block', marginBottom: '10px' }}>
-            Name: <br /> Adınız:
-          </label>
-          <input
-            type="text"
-            id="name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            style={{
-              width: '50%',
-              padding: '10px',
-              border: '1px solid #ccc',
-              borderRadius: '4px',
-              marginBottom: '20px'
-            }}
-          />
 
-          <label htmlFor="email" style={{ display: 'block', marginBottom: '10px' }}>
-            Email: <br /> Email:
-          </label>
-          <input
-            type="email"
-            id="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            style={{
-              width: '50%',
-              padding: '10px',
-              border: '1px solid #ccc',
-              borderRadius: '4px',
-              marginBottom: '20px'
-            }}
+        {/* Sağ tərəf: Xəritə şəkli */}
+        <div style={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '20px' }}>
+          <img 
+            src="https://yeniemlak.az/get-img/11102024W6403121.jfif" 
+            alt="Xəritə - Af Buisness House" 
+            style={{ maxWidth: '70%', borderRadius: '8px' }}
           />
-
-          <label htmlFor="message" style={{ display: 'block', marginBottom: '10px' }}>
-            Mesaj: <br /> Mesajınız:
-          </label>
-          <textarea
-            id="message"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            rows="4"
-            style={{
-              width: '50%',
-              padding: '10px',
-              border: '1px solid #ccc',
-              borderRadius: '4px',
-              marginBottom: '20px' // Burada məsafə qoyulub
-            }}
-          />
-
-          {/* Düyməni textarea-nın altında yerləşdiririk */}
-          <div>
-            <button type="submit" style={{ padding: '10px 20px', border: 'none', borderRadius: '5px', backgroundColor: '#007BFF', color: 'white' }}>
-              Göndər
-            </button>
-          </div>
-        </form>
-      )}
+        </div>
+      </div>
     </div>
-
-
-
-
   );
 }
 
