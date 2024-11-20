@@ -10,6 +10,7 @@ import ContactForm from './ContactForm';
 import Services from '././Services';
 import Blog from './Blog';
 import TeamSection from './TeamSection';
+import FeedbackForm from './FeedbackForm';
 
 
 const Home = () => {
@@ -22,11 +23,12 @@ const Home = () => {
 <Apply/>
 <AwardsContainer/>
 <Awesome/>
-<ContactForm/>
 <Blog/>
 <Services/>
 <TeamSection/>
+<ContactForm/>
 <Footer/>
+<FeedbackForm/>
 </>
   )
 }

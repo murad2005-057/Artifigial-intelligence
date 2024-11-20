@@ -7,33 +7,38 @@ function FeedbackForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setSubmitted(true);
-    // Burada feedback-i backend-ə göndərə və ya emal edə bilərsiniz
+    // You can send feedback to the backend or process it here
     console.log('Feedback:', feedback);
   };
 
   return (
-    <div style={{
-      margin: 'auto',
-      padding: '20px',
-      fontFamily: 'Arial, sans-serif',
-      backgroundColor: '#08101d',
-      color: '#fff',
-    
-    }}>
+    <div
+      style={{
+        margin: 'auto',
+        padding: '20px',
+        fontFamily: 'Arial, sans-serif',
+        backgroundColor: '#08101d',
+        color: '#fff',
+      }}
+    >
       <h3 style={{ paddingBottom: '35px', textAlign: 'center' }}>
-        Share your thoughts on Artificial Intelligence <br />
-        Süni intellekt haqqında fikirlərinizi bildirin
+        Share your thoughts on Artificial Intelligence
       </h3>
-      
+
       {submitted ? (
         <div style={{ color: 'green', marginTop: '20px', textAlign: 'center' }}>
-          Təşəkkürlər! Feedbackinizi aldıq. <br />
-          Thanks! We received your feedback.
+          Thank you! We received your feedback.
         </div>
       ) : (
         <form onSubmit={handleSubmit}>
-          <label htmlFor="feedback" style={{ display: 'block', marginBottom: '10px', fontWeight: 'bold' }}>
-            Süni intellekt haqqında fikirləriniz: <br />
+          <label
+            htmlFor="feedback"
+            style={{
+              display: 'block',
+              marginBottom: '10px',
+              fontWeight: 'bold',
+            }}
+          >
             Your thoughts on Artificial Intelligence:
           </label>
           <textarea
@@ -42,15 +47,15 @@ function FeedbackForm() {
             onChange={(e) => setFeedback(e.target.value)}
             rows="4"
             style={{
-              width: '35%', // Mətn sahəsinin eni 35% olaraq təyin edildi
+              width: '35%', // Text area width is set to 35%
               padding: '10px',
               border: '1px solid #ccc',
               borderRadius: '4px',
-              marginBottom: '5px', // Bu sahənin altına məsafə əlavə edildi
-              resize: 'vertical' // İstifadəçinin mətn sahəsini dikey olaraq genişləndirməsinə icazə verir
+              marginBottom: '5px', // Added spacing below this field
+              resize: 'vertical', // Allows users to vertically resize the text area
             }}
           />
-          {/* Düyməni textarea-nın altında yerləşdiririk */}
+          {/* Button positioned below the textarea */}
           <div>
             <button
               type="submit"
@@ -60,10 +65,10 @@ function FeedbackForm() {
                 borderRadius: '5px',
                 backgroundColor: '#007BFF',
                 color: 'white',
-                cursor: 'pointer'
+                cursor: 'pointer',
               }}
             >
-              Göndər
+              Submit
             </button>
           </div>
         </form>

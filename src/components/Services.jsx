@@ -2,15 +2,27 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const services = [
-  { title: "SEO və Rəqəmsal Marketinq", image: "https://images.pexels.com/photos/19319639/pexels-photo-19319639/free-photo-of-boston-dynamics-robot-in-a-car-factory.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", description: "Axtarış motoru optimizasiyası və onlayn marketinq strategiyaları ilə onlayn görünürlüğü artırmaq.Müştərilərə Faydası: Veb saytına daha çox orqanik trafik cəlb etmək və lider yaradıcılığı və ya onlayn satışları artırmaq.",  },
-  { title: "E-ticarət İnkişafı", image: "https://media.istockphoto.com/id/1515913422/photo/a-data-analyst-using-technology-ai-for-working-tool-for-data-analysis-chatbot-chat-with-ai.jpg?s=1024x1024&w=is&k=20&c=1Gp42CNED2rctVjUgHazI_2YmauuP0zb6RYuGRacwaY=", description: "Nə Təklif Edirsiniz: E-ticarət platformalarının (Shopify, WooCommerce və s.) qurulması və optimallaşdırılması.Müştərilərə Faydası: İstifadəçi dostu, etibarlı və cəlbedici bir onlayn mağaza yaradaraq satışları artırmaq.",  },
-  { title: "Mobil Tətbiq İnkişafı", image: "https://images.pexels.com/photos/8728560/pexels-photo-8728560.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", description: "Nə Təklif Edirsiniz: Müştəri məhsulları və ya xidmətləri üçün xüsusi mobil tətbiqlərin hazırlanması.Müştərilərə Faydası: Müştəriyə mobil platformada rahatlıqla xidmət və məhsul təqdim edərək daha geniş auditoriyaya çatmaq.",  }
+  {
+    title: "SEO and Digital Marketing",
+    image: "https://images.pexels.com/photos/19319639/pexels-photo-19319639/free-photo-of-boston-dynamics-robot-in-a-car-factory.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    description: "Increase online visibility with search engine optimization and online marketing strategies. Benefit for Clients: Attract more organic traffic to the website and boost lead generation or online sales.",
+  },
+  {
+    title: "E-commerce Development",
+    image: "https://media.istockphoto.com/id/1515913422/photo/a-data-analyst-using-technology-ai-for-working-tool-for-data-analysis-chatbot-chat-with-ai.jpg?s=1024x1024&w=is&k=20&c=1Gp42CNED2rctVjUgHazI_2YmauuP0zb6RYuGRacwaY=",
+    description: "What We Offer: Building and optimizing e-commerce platforms (Shopify, WooCommerce, etc.). Benefit for Clients: Increase sales by creating a user-friendly, reliable, and appealing online store.",
+  },
+  {
+    title: "Mobile App Development",
+    image: "https://images.pexels.com/photos/8728560/pexels-photo-8728560.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    description: "What We Offer: Developing custom mobile applications for client products or services. Benefit for Clients: Reach a wider audience by providing products and services conveniently on mobile platforms.",
+  },
 ];
 
 function Services() {
   return (
     <section style={styles.servicesSection}>
-      <h2 style={styles.sectionTitle}>Xidmətlər</h2>
+      <h2 style={styles.sectionTitle}>Services</h2>
       <div style={styles.cardContainer}>
         {services.map((service, index) => (
           <Link to={service.path} key={index} style={styles.cardLink}>
@@ -29,15 +41,11 @@ function Services() {
 }
 
 const styles = {
-
-
-
   servicesSection: {
     padding: '20px',
     backgroundColor: '#020a18',
-   color:'#000',
+    color: '#000',
     textAlign: 'center',
-   
   },
   sectionTitle: {
     fontSize: '2em',
@@ -80,7 +88,7 @@ const styles = {
   cardDescription: {
     fontSize: '0.9em',
     color: '#fff',
-  }
+  },
 };
 
 export default Services;

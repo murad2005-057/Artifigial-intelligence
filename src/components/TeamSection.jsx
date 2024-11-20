@@ -20,7 +20,7 @@ const teamMembers = [
 const TeamSection = () => {
   return (
     <TeamContainer>
-      <Title>Komandamız</Title>
+      <Title>Our Team</Title>
       <TeamMembers>
         {teamMembers.map((member, index) => (
           <TeamMember key={index}>
